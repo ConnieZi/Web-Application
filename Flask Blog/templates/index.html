@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+
+{% block head %}
+    <title>Index page </title>
+{% endblock %}
+
+{% block body%}
+<div id="content">
+    {% if blogs|length < 1 %}
+        <h2> No blogs have been created yet</h2>
+    {% else %}
+        {% for blog in blogs %}
+            <div class="list-of-blogs">
+                <a href="blog/{{blog.id}}">
+                    <h2>{{ blog.title}} </h2>
+                    <p>Written by {{ blog.author}} </p>
+                </a>
+                <br>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+
+{% endblock %}
