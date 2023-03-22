@@ -5,8 +5,6 @@ import ListOfMovies from './listOfMovies';
 import Search from './Search';
 import './App.css';
 
-// API key: f7a2253b
-
 const API_URL = 'http://www.omdbapi.com?apikey=f7a2253b';
 
 
